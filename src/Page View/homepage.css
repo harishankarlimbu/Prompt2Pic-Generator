@@ -1,0 +1,269 @@
+/* Container */
+.prompt-generator {
+  margin-bottom: 500px;
+  max-width: 900px;
+  position: flex;
+  margin: auto;
+  padding: 20px;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: #e5e7ed;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+}
+
+/* Heading */
+.prompt-generator h2 {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 25px;
+  color: #2c3e50;
+}
+
+/* Topic Textarea */
+.topic-textarea {
+  width: 95%;
+  padding: 15px;
+  font-size: 20px;
+  border-radius: 10px;
+  border: 1px solid #ccc;
+  resize: vertical;
+  margin-bottom: 20px;
+  box-shadow: inset 0 2px 6px rgba(0,0,0,0.05);
+  transition: border 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+}
+
+.topic-textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 8px rgba(0,123,255,0.3);
+  outline: none;
+}
+
+/* Buttons */
+.main-btn {
+  display: block;                /* Make it a block element */
+  margin: 0 auto;                 /* Auto left/right margins center it */
+  padding: 12px 22px;
+  font-size: 18px;
+  font-weight: 600;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  background: #007bff;
+  color: #fff;
+  transition: all 0.2s ease-in-out;
+}
+
+.main-btn:hover {
+  background: #e11212;
+}
+
+.main-btn.secondary {
+  background: #28a745;
+}
+
+.main-btn.secondary:hover {
+  background: #1e7e34;
+}
+
+/* Scenes container */
+.scenes-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  margin-top: 30px;
+}
+
+/* Scene Card */
+.scene-card {
+  flex: 1 1 calc(50% - 20px);
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scene-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+/* Scene Textarea */
+.scene-textarea {
+  width: 97%;
+  height: 100px;
+  border-radius: 8px;
+  padding: 10px;
+  font-size: 18px;
+  border: 1px solid #ccc;
+  resize: none;
+  margin-bottom: 12px;
+  transition: border 0.2s ease, box-shadow 0.2s ease;
+}
+
+.scene-textarea:focus {
+  border-color: #007bff;
+  box-shadow: 0 0 6px rgba(0,123,255,0.2);
+  outline: none;
+}
+
+/* Scene actions buttons */
+.scene-actions {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 12px;
+}
+
+.scene-btn {
+  flex: 1;
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  background: #007bff;
+  color: #fff;
+  transition: all 0.2s ease;
+}
+
+.scene-btn:hover {
+  background: #0056b3;
+}
+
+.scene-btn.secondary {
+  background: #28a745;
+}
+
+.scene-btn.secondary:hover {
+  background: #1e7e34;
+}
+
+/* Scene image */
+.scene-image {
+  width: 100%;
+  margin-top: 12px;
+  border-radius: 10px;
+  border: 1px solid #ddd;
+  box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+  transition: transform 0.2s ease;
+}
+
+.scene-image:hover {
+  transform: scale(1.02);
+}
+
+/* Download all container */
+.download-all {
+  display: flex;               /* Arrange children in a row */
+  justify-content: center;     /* Center items horizontally */
+  gap: 15px;                    /* Space between items */
+  margin-top: 30px;             /* Push down from top */
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .scenes-list {
+    flex-direction: column;
+  }
+
+  .scene-card {
+    flex: 1 1 100%;
+  }
+}
+.footer{
+  opacity:30%;
+}
+.voice-to-text {
+  display: flex;
+  gap: 12px;
+  align-items: center;
+  padding: 10px;
+}
+
+.voice-btn, .stop-btn {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 10px 16px;
+  border: 2px solid #ddd;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  outline: none;
+}
+
+.voice-btn:hover {
+  background: #f0f8ff;
+  border-color: #4a90e2;
+  transform: translateY(-1px);
+}
+
+.voice-btn.listening {
+  background: #e8f5e8;
+  border-color: #4caf50;
+  color: #2e7d32;
+}
+
+.voice-btn:disabled {
+  cursor: not-allowed;
+}
+
+.stop-btn {
+  background: #ffebee;
+  border-color: #f44336;
+  color: #c62828;
+}
+
+.stop-btn:hover:not(:disabled) {
+  background: #ffcdd2;
+  transform: translateY(-1px);
+}
+
+.stop-btn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  transform: none;
+}
+
+/* Pulse animation for listening indicator */
+.pulse-dot {
+  width: 8px;
+  height: 8px;
+  background: #f44336;
+  border-radius: 50%;
+  display: inline-block;
+  animation: pulse 1s infinite;
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.3);
+    opacity: 0.7;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+/* Button press animation */
+.voice-btn:active, .stop-btn:active {
+  transform: translateY(1px);
+  transition: transform 0.1s;
+}
+
+/* App.css */
+.logo {
+  display: block;       /* make it a block element */
+  margin: 3px auto;    /* 40px top & bottom, auto left & right (centers) */
+  height: 100px;         /* adjust height as needed */
+  object-fit: contain;  /* keep aspect ratio */
+}
+

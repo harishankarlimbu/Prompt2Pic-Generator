@@ -1,28 +1,9 @@
-/* Container */
-.prompt-generator {
-  margin-bottom: 500px;
-  max-width: 900px;
-  position: flex;
-  margin: auto;
-  padding: 20px;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  background: #e5e7ed;
-  border-radius: 12px;
-  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
-}
-
-/* Heading */
-.prompt-generator h2 {
-  text-align: center;
-  font-size: 32px;
-  margin-bottom: 25px;
-  color: #2c3e50;
-}
 
 /* Topic Textarea */
 .topic-textarea {
   width: 95%;
   padding: 15px;
+  margin:0 auto;
   font-size: 20px;
   border-radius: 10px;
   border: 1px solid #ccc;
@@ -40,8 +21,9 @@
 
 /* Buttons */
 .main-btn {
-  display: block;                /* Make it a block element */
-  margin: 0 auto;                 /* Auto left/right margins center it */
+  display: block;    
+  margin-bottom: 50px;            /* Make it a block element */
+  margin: 10px auto;                 /* Auto left/right margins center it */
   padding: 12px 22px;
   font-size: 18px;
   font-weight: 600;
@@ -170,9 +152,6 @@
     flex: 1 1 100%;
   }
 }
-.footer{
-  opacity:30%;
-}
 .voice-to-text {
   display: flex;
   gap: 12px;
@@ -257,13 +236,5 @@
 .voice-btn:active, .stop-btn:active {
   transform: translateY(1px);
   transition: transform 0.1s;
-}
-
-/* App.css */
-.logo {
-  display: block;       /* make it a block element */
-  margin: 3px auto;    /* 40px top & bottom, auto left & right (centers) */
-  height: 100px;         /* adjust height as needed */
-  object-fit: contain;  /* keep aspect ratio */
 }
 

@@ -94,10 +94,6 @@ export default function VoiceToText({
 
     rec.onend = () => {
       setListening(false);
-      // Auto-restart on network errors (optional)
-      // if (err && err.error === 'network') {
-      //   setTimeout(() => startListening(), 1000);
-      // }
     };
 
     try {

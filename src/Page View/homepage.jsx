@@ -88,12 +88,12 @@ Keys: "scene" (1-5), "prompt" (detailed prompt string)
   };
 
   return (
-    <div className="prompt-generator">
-      <div className="footer">
-        @AshokLimbu
-      </div>
+   <div class="bg-grey-300 mb-[100px] max-w-[900px] mx-auto p-[20px] font-sans rounded-[12px] shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+  <div class="block opacity-11 mt-10">
+    @AshokLimbu
+  </div>
       
-<img src={logo} className="logo"/>
+<img src={logo} class="block my-[3px] mx-auto h-[70px] object-contain"/>
       
       {/* Voice Input Section */}
       <div className="voice-section">
@@ -108,7 +108,7 @@ Keys: "scene" (1-5), "prompt" (detailed prompt string)
         id="topic-textarea"
         value={topic}
         onChange={(e) => setTopic(e.target.value)}
-        placeholder="Enter your theme or idea... (or use voice input above)"
+        placeholder="Enter your idea... (or use voice input above)"
         rows={6}
         cols={30}
         className="topic-textarea"
